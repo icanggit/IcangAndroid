@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 定义所有图片的数组 -->
+    <!-- 自定义数据组 -->
+    <array name="icons">
+        <item> @mipmap/bg02</item>
+        <item> @mipmap/bg03</item>
+        <item> @mipmap/bg04</item>
+        <item> @mipmap/bg05</item>
+    </array>
+
+</resources>

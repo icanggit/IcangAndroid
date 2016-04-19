@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip">
+        <RelativeLayout
+            android:background="@mipmap/search_bg"
+            android:layout_width="match_parent"
+            android:layout_height="30.0dip"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toLeftOf="@+id/tv_cancle"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/iv_search_icon"
+                android:layout_width="16.0dip"
+                android:layout_height="16.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:src="@mipmap/search_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+            <EditText
+                android:textSize="16dp"
+                android:id="@+id/et_input"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10.0dip"
+                android:singleLine="true"
+                android:layout_toRightOf="@id/iv_search_icon"
+                android:layout_centerVertical="true"
+                android:imeOptions="actionSearch" />
+        </RelativeLayout>
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/tv_cancle"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:text="热搜"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <me.next.tagview.TagCloudView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tag_cloud_view"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="15dp"
+        app:tcvBackground="@drawable/shape_white"
+        app:tcvTextColor="#ff272727"
+        app:tcvBorder="8.0dip"
+        app:tcvItemBorderVertical="6.0dip"
+        app:tcvItemBorderHorizontal="8.0dip"
+        app:tcvSingleLine="false"
+        app:tcvCanTagClick="true"
+        app:tcvTagResId="@layout/item_tag_new"
+        />
+
+    <TextView android:textSize="14dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="10.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:text="最近搜索"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+    <ListView
+        android:id="@+id/lv_search_history"
+        android:background="@color/white"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null" />
+    <LinearLayout
+        android:id="@+id/ll_delete_history"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.0dip">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_width="150.0dip"
+            android:layout_height="30.0dip">
+            <ImageView android:layout_width="15.0dip"
+                android:layout_height="15.0dip"
+                android:src="@mipmap/search_delete_icon" />
+            <TextView
+                android:textSize="14dp"
+                android:textColor="#ff7f7f7f"
+                android:gravity="center"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="30.0dip"
+                android:text="清除历史搜索" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
